@@ -1,11 +1,12 @@
 # Gym AI
 
-
 ### setup for local development 
 1. clone the repo
 2. setup .env from .env.local
 3. run `npm install`
 
+## DEMO
+[(GYM AI APP)](https://64e1a49144ad10356654a827--mellow-croissant-e80c45.netlify.app/)
 ## Available Scripts
 ### `npm start`
 
