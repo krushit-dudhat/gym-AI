@@ -1,8 +1,8 @@
-import {
-  ChatPromptTemplate,
-  SystemMessagePromptTemplate,
-  HumanMessagePromptTemplate
-} from "langchain/prompts";
+// import {
+//   ChatPromptTemplate,
+//   SystemMessagePromptTemplate,
+//   HumanMessagePromptTemplate
+// } from "langchain/prompts";
 import { LLMChain } from "langchain/chains";
 import { OpenAI } from "langchain/llms/openai";
 import { ChatOpenAI } from "langchain/chat_models/openai";
@@ -19,12 +19,12 @@ const llm = new OpenAI({
 });
 
 
-const template = "You are a helpful gym assistant who provides custom gym workout routine from persons preference.";
-const systemMessagePrompt = SystemMessagePromptTemplate.fromTemplate(template);
-const humanTemplate = "create a workout reoutine with reference of age: {age}, gender: {gender}, weight: {weight}, height: {height}, workout goal: {goal}, daily time spent in gym: {gymTime}, primary muscle to target during workout: {targetMuscle}, workout routine should be in a format of monday to saterday days in a week, with each day what exercise to perform in gym time. exercise in a format of first exercise name then no of raps x repetation.";
-const humanMessagePrompt = HumanMessagePromptTemplate.fromTemplate(humanTemplate);
+// const template = "You are a helpful gym assistant who provides custom gym workout routine from persons preference.";
+// const systemMessagePrompt = SystemMessagePromptTemplate.fromTemplate(template);
+// const humanTemplate = "create a workout reoutine with reference of age: {age}, gender: {gender}, weight: {weight}, height: {height}, workout goal: {goal}, daily time spent in gym: {gymTime}, primary muscle to target during workout: {targetMuscle}, workout routine should be in a format of monday to saterday days in a week, with each day what exercise to perform in gym time. exercise in a format of first exercise name then no of raps x repetation.";
+// const humanMessagePrompt = HumanMessagePromptTemplate.fromTemplate(humanTemplate);
 
-const chatPrompt = ChatPromptTemplate.fromPromptMessages([systemMessagePrompt, humanMessagePrompt]);
+// const chatPrompt = ChatPromptTemplate.fromPromptMessages([systemMessagePrompt, humanMessagePrompt]);
 
 
 async function fetchWorkoutPlan(data) {
