@@ -13,13 +13,11 @@ import {
 } from "langchain/output_parsers";
 import { z } from "zod";
 
-console.log("openai", process.env.REACT_APP_CHATGPT_API_KEY);
 const llm = new OpenAI({
   openAIApiKey: process.env.REACT_APP_CHATGPT_API_KEY,
   // temperature: 0
 });
 
-console.log(llm);
 
 const template = "You are a helpful gym assistant who provides custom gym workout routine from persons preference.";
 const systemMessagePrompt = SystemMessagePromptTemplate.fromTemplate(template);
@@ -78,14 +76,10 @@ async function fetchWorkoutPlan(data) {
     };
 
       // const formattedPrompt = await chatPrompt.formatMessages(input_value);
-  // console.log('formated prompt', formattedPrompt);
 
-    console.log(input_value);
     let res = await chain.call(input_value);
-    console.log("res", res);
     return res;
   } catch (error) {
-    console.log(error);
     return false;
   }
 }

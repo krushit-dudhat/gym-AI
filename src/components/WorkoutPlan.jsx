@@ -10,11 +10,6 @@ const override = {
 export default function WorkoutPlan() {
   const { workoutRoutine, isLoading } = useSelector((state) => state.workoutPlan);
 
-  console.log('records ', workoutRoutine);
-  // useEffect(() => {
-  //   console.log('records ', workoutRoutine);
-  // }, [isLoading]);
-
   return (
     <>
       <div className='container bg-slate-900 md:w-1/2 md:m-0 w-full m-auto p-2 h-full'>

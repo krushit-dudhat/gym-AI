@@ -20,7 +20,6 @@ export default function UserPreference() {
   }
 
   const handleCheckboxChange = (e, field) => {
-    console.log('click')
     if (prefData[field]) {
       let target = e.target.value;
       if (prefData[field].includes(target)) {
@@ -34,15 +33,15 @@ export default function UserPreference() {
   };
 
   const handleSubmit = async (e) => {
-    console.log("submit", e);
     e.preventDefault();
 
     dispatch(updateField({ field: 'isLoading', value: true }));
     let res = await fetchWorkoutPlan(prefData);
-    console.log(res);
     if (res) {
       res = res.records;
       dispatch(updateWorkoutPlan(res));
+    } else {
+      dispatch(updateField({ field: 'isLoading', value: false }));
     }
   }
   
