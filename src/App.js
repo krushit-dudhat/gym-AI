@@ -1,10 +1,13 @@
 import Home from './components/Home';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="">
+    <div className="h-screen">
+      <Navbar/>
       <Home/>
-
+      <Footer/>
     </div>
   );
 }
